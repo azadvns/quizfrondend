@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+    <style>
+        .col {
+            border-style: ridge;
+            width: 50px;
+            height: 50px;
+            padding: 20px;
+            font-size: 50px;
+            cursor: pointer;
+            color: black;
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <h2>Tic-tac-toe Game</h2>
+        <div id="dra"></div>
+        <table border="1">
+
+            <tr>
+                <td>
+                    <div id="t1" onclick="play(`t1`)" class="col"></div>
+                </td>
+
+
+
+                <td>
+                    <div id="t2" onclick="play(`t2`)" class="col"></div>
+                </td>
+
+
+
+                <td>
+                    <div id="t3" onclick="play(`t3`)" class="col"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div id="t4" onclick="play(`t4`)" class="col"></div>
+                </td>
+
+
+
+                <td>
+                    <div id="t5" onclick="play(`t5`)" class="col"></div>
+                </td>
+
+
+
+                <td>
+                    <div id="t6" onclick="play(`t6`)" class="col"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div id="t7" onclick="play(`t7`)" class="col"></div>
+                </td>
+
+
+
+                <td>
+                    <div id="t8" onclick="play(`t8`)" class="col"></div>
+                </td>
+
+
+
+                <td>
+                    <div id="t9" onclick="play(`t9`)" class="col"></div>
+                </td>
+            </tr>
+
+        </table>
+    </center>
+
+    
+
+    <script>
+
+
+        // const win1 = [1, 2, 3];
+        // const win2 = [4, 5, 6];
+        // const win3 = [7, 8, 9];
+        // const win4 = [1, 4, 7];
+        // const win5 = [2, 5, 8];
+        // const win6 = [3, 6, 9];
+        // const win7 = [1, 5, 9];
+        // const win8 = [3, 5, 7];
+
+
+        let player = 1;
+
+
+        function play(id) {
+            let currentcoin = document.getElementById(id).innerHTML;
+            // alert(currentcoin);
+            if (currentcoin == "X" || currentcoin == "O") {
+                alert("Already filled");
+                return;
+            }
+
+
+            let coin;
+            if (player == 1)
+                coin = ("X");
+
+            else
+                coin = ("O");
+            player = 3 - player
+            document.getElementById(id).innerHTML = coin;
+            console.log("print")
+
+            checkGameStatus();
+
+        }
+        function checkGameStatus() {
+            let c1 = document.getElementById("t1").innerHTML;
+            let xcount = 0;
+            let ocount = 0;
+            let drawcount = 0;
+            if (c1 == "X") {
+                xcount++;
+            }
+
+
+            if (c1 == "O") {
+                ocount++;
+            }
+
+
+
+            let c2 = document.getElementById("t2").innerHTML;
+
+            if (c2 == "X") {
+                xcount++;
+            }
+
+
+            if (c2 == "O") {
+                ocount++;
+            }
+
+
+
+
+            let c3 = document.getElementById("t3").innerHTML;
+
+            if (c3 == "X") {
+                xcount++;
+            }
+
+            if (c3 == "O") {
+                ocount++;
+            }
+
+
+            
+            console.log(xcount);
+            console.log(ocount);
+
+            if (xcount > 0 && ocount > 0) {
+                // alert("match draw");
+                drawcount++;
+
+
+
+            }
+            if (xcount == 3) {
+                alert("X Winner");
+                return;
+
+            }
+
+            if (ocount == 3) {
+                alert("O Winner");
+                return;
+
+            }
+            // ****************************[2]**************************************
+            xcount = 0;
+            ocount = 0;
+
+            let c4 = document.getElementById("t4").innerHTML;
+            if (c4 == "X") {
+                xcount++;
+            }
+
+            if (c4 == "O") {
+                ocount++;
+            }
+
+            let c5 = document.getElementById("t5").innerHTML;
+            if (c5 == "X") {
+                xcount++;
+            }
+
+            if (c5 == "O") {
+                ocount++;
+            }
+
+            let c6 = document.getElementById("t6").innerHTML;
+            if (c6 == "X") {
+                xcount++;
+            }
+
+            if (c6 == "O") {
+                ocount++;
+            }
+            console.log(xcount);
+            console.log(ocount);
+
+            if (xcount > 0 && ocount > 0) {
+                // alert("match draw");
+                drawcount++;
+
+
+            }
+            if (xcount == 3) {
+                alert("X Winner");
+                return;
+
+            }
+
+            if (ocount == 3) {
+                alert("O Winner");
+                return;
+
+            }
+            // ******************************[3]*************************************************
+
+            xcount = 0;
+            ocount = 0;
+
+            let c7 = document.getElementById("t7").innerHTML;
+            if (c7 == "X") {
+                xcount++;
+            }
+
+            if (c7 == "O") {
+                ocount++;
+            }
+
+            let c8 = document.getElementById("t8").innerHTML;
+            if (c8 == "X") {
+                xcount++;
+            }
+
+            if (c8 == "O") {
+                ocount++;
+            }
+
+            let c9 = document.getElementById("t9").innerHTML;
+            if (c9 == "X") {
+                xcount++;
+            }
+
+            if (c9 == "O") {
+                ocount++;
+            }
+            console.log(xcount);
+            console.log(ocount);
+
+            if (xcount > 0 && ocount > 0) {
+                // alert("match draw");
+                drawcount++;
+
+
+            }
+            if (xcount == 3) {
+                alert("X Winner");
+                return;
+
+            }
+
+            if (ocount == 3) {
+                alert("O Winner");
+                return;
+
+            }
+            // *******************************[4]*******************************************
+
+            xcount = 0;
+            ocount = 0;
+
+            let c10 = document.getElementById("t1").innerHTML;
+            if (c10 == "X") {
+                xcount++;
+            }
+
+            if (c10 == "O") {
+                ocount++;
+            }
+
+            let c11 = document.getElementById("t4").innerHTML;
+            if (c11 == "X") {
+                xcount++;
+            }
+
+            if (c11 == "O") {
+                ocount++;
+            }
+
+            let c12 = document.getElementById("t7").innerHTML;
+            if (c12 == "X") {
+                xcount++;
+            }
+
+            if (c12 == "O") {
+                ocount++;
+            }
+            console.log(xcount);
+            console.log(ocount);
+
+            if (xcount > 0 && ocount > 0) {
+                // alert("match draw");
+                drawcount++;
+
+
+            }
+            if (xcount == 3) {
+                alert("X Winner");
+                return;
+
+            }
+
+            if (ocount == 3) {
+                alert("O Winner");
+                return;
+
+            }
+
+            // *******************************[5]********************************************
+
+            xcount = 0;
+            ocount = 0;
+
+            let c13 = document.getElementById("t2").innerHTML;
+            if (c13 == "X") {
+                xcount++;
+            }
+
+            if (c13 == "O") {
+                ocount++;
+            }
+
+            let c14 = document.getElementById("t5").innerHTML;
+            if (c14 == "X") {
+                xcount++;
+            }
+
+            if (c14 == "O") {
+                ocount++;
+            }
+
+            let c15 = document.getElementById("t8").innerHTML;
+            if (c15 == "X") {
+                xcount++;
+            }
+
+            if (c15 == "O") {
+                ocount++;
+            }
+            console.log(xcount);
+            console.log(ocount);
+
+            if (xcount > 0 && ocount > 0) {
+                // alert("match draw");
+                drawcount++;
+
+
+            }
+            if (xcount == 3) {
+                alert("X Winner");
+                return;
+
+            }
+
+            if (ocount == 3) {
+                alert("O Winner");
+                return;
+
+            }
+
+            // ********************[6]**************************
+
+            xcount = 0;
+            ocount = 0;
+
+            let c16 = document.getElementById("t3").innerHTML;
+            if (c16 == "X") {
+                xcount++;
+            }
+
+            if (c16 == "O") {
+                ocount++;
+            }
+
+            let c17 = document.getElementById("t6").innerHTML;
+            if (c17 == "X") {
+                xcount++;
+            }
+
+            if (c17 == "O") {
+                ocount++;
+            }
+
+            let c18 = document.getElementById("t9").innerHTML;
+            if (c18 == "X") {
+                xcount++;
+            }
+
+            if (c18 == "O") {
+                ocount++;
+            }
+            console.log(xcount);
+            console.log(ocount);
+
+            if (xcount > 0 && ocount > 0) {
+                // alert("match draw");
+                drawcount++;
+
+
+            }
+            if (xcount == 3) {
+                alert("X Winner");
+                return;
+
+            }
+
+            if (ocount == 3) {
+                alert("O Winner");
+                return;
+
+            }
+
+            // *****************[7]*************************
+
+            xcount = 0;
+            ocount = 0;
+
+            let c19 = document.getElementById("t1").innerHTML;
+            if (c19 == "X") {
+                xcount++;
+            }
+
+            if (c19 == "O") {
+                ocount++;
+            }
+
+            let c20 = document.getElementById("t5").innerHTML;
+            if (c20 == "X") {
+                xcount++;
+            }
+
+            if (c20 == "O") {
+                ocount++;
+            }
+
+            let c21 = document.getElementById("t9").innerHTML;
+            if (c21 == "X") {
+                xcount++;
+            }
+
+            if (c21 == "O") {
+                ocount++;
+            }
+            console.log(xcount);
+            console.log(ocount);
+
+            if (xcount > 0 && ocount > 0) {
+                // alert("match draw");
+                drawcount++;
+
+
+            }
+            if (xcount == 3) {
+                alert("X Winner");
+                return;
+
+            }
+
+            if (ocount == 3) {
+                alert("O Winner");
+                return;
+
+            }
+
+            // *****************[8]**************************
+
+            xcount = 0;
+            ocount = 0;
+
+            let c22 = document.getElementById("t3").innerHTML;
+            if (c22 == "X") {
+                xcount++;
+            }
+
+            if (c22 == "O") {
+                ocount++;
+            }
+
+            let c23 = document.getElementById("t5").innerHTML;
+            if (c23 == "X") {
+                xcount++;
+            }
+
+            if (c23 == "O") {
+                ocount++;
+            }
+
+            let c24 = document.getElementById("t7").innerHTML;
+            if (c24 == "X") {
+                xcount++;
+            }
+
+            if (c24 == "O") {
+                ocount++;
+            }
+            console.log(xcount);
+            console.log(ocount);
+
+            if (xcount > 0 && ocount > 0) {
+                // alert("match draw");
+                drawcount++;
+
+
+            }
+            if (xcount == 3) {
+                alert("X Winner");
+                return;
+
+            }
+
+            if (ocount == 3) {
+                alert("O Winner");
+                
+                return;
+
+            }
+            
+let dd=document.getElementById("dra");
+dd.innerHTML=drawcount;
+        }
+
+    </script>
+    
+    <!-- <button onclick="checkGameStatus()">check</button> -->
+
+</body>
+
+</html>

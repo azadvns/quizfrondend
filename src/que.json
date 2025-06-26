@@ -1,0 +1,62 @@
+[
+{
+"qno": 1,
+"question": "Which of the three bank will be merged with the other two to create Indias third-largest bank",
+
+"a":"Panjab National Bank",
+"b":"Indian BAnk",
+"c":"Bank of Baroda",
+"d":"Dena Bank",
+
+"answer": "1"
+
+},
+{
+"qno": 2,
+"question 2": "What is the name of the weak zone of the earths crust?",
+
+"a":"Seismic",
+"b":"Cosmic",
+"c":"Formic",
+"d":"Anaemic",
+
+"answer": "0"
+
+},
+{
+"qno": 3,
+"question 3": "Where was India's first national Museum opened?",
+
+"a":"Delhi",
+"b":"Hyderabad",
+"c":"Rajasthan",
+"d":"Mumbai",
+
+"answer": "3"
+
+},
+{
+"qno": 4,
+"question 4": "In 2019,Which popular singer was awarded the Bharat Ratna award?",
+
+"a":"Lata Mangeshkar",
+"b":"Asha Bhosle",
+"c":"Bhupen Hazarika",
+"d":"Manna Dey",
+
+"answer": "2"
+
+},
+{
+"qno": 5,
+"question 5": "The word's nation 5G mobile network was launched by which country?",
+
+"a":"Japan",
+"b":"Asia",
+"c":"South Korea",
+"d":"Malaysia",
+
+"answer": "2"
+
+}
+]
