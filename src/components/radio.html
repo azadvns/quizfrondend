@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>A<input type="radio" name="option" id="inp1"></label><br>
+    <label>B<input type="radio" name="option" id="inp2"></label><br>
+    <label>C<input type="radio" name="option" id="inp3"></label><br>
+    <label>D<input type="radio" name="option" id="inp4"></label><br>
+    <label><input checked type="radio" name="option" id="inp"></label><br>
+
+    <button onclick="alert(checkGivenAnswer())">add</button>
+    <script>
+        function checkGivenAnswer() {
+            if (document.getElementById("inp").checked)
+                return 0;
+            if (document.getElementById("inp1").checked)
+                return 1;
+
+            if (document.getElementById("inp2").checked)
+                return 2;
+            if (document.getElementById("inp3").checked)
+                return 3;
+
+            if (document.getElementById("inp4").checked)
+                return 4;
+            return 0;
+        }
+    </script>
+</body>
+
+</html>
