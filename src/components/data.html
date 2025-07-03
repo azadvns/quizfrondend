@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolor</title>
+</head>
+
+<body>
+    <button onclick="datatable()">Datatable</button>
+
+    <script>
+    
+
+
+            let data =`[
+{
+"qno": 1,
+"question": "Which of the three bank will be merged with the other two to create Indias third-largest bank",
+"a": "Punjab National Bank",
+"b": "Indian Bank",
+"c": "Bank of Baroda",
+"d": "Dena Bank",
+"answer": "1"
+},
+{
+"qno": 2,
+"question": "What is the name of the weak zone of the earths crust?",
+"a": "Seismic",
+"b": "Cosmic",
+"c": "Formic",
+"d": "Anaemic",
+"answer": "1"
+},
+{
+"qno": 3,
+"question": "Where was India's first national Museum opened?",
+"a": "Delhi",
+"b": "Hyderabad",
+"c": "Rajasthan",
+"d": "Mumbai",
+"answer": "1"
+},
+{
+"qno": 4,
+"question": "In 2019,Which popular singer was awarded the Bharat Ratna award?",
+"a": "Lata Mangeshkar",
+"b": "Asha Bhosle",
+"c": "Bhupen Hazarika",
+"d": "Manna Dey",
+"answer": "3"
+},
+{
+"qno": 5,
+"question": "The word's nation 5G mobile network was launched by which country?",
+"a": "Japan",
+"b": "Asia",
+"c": "South Korea",
+"d": "Malaysia",
+"answer": "3"
+}
+]`;
+
+function datatable(){
+
+    data=JSON.parse(data);
+    let n=Number(data.length);
+let output=`<tr><td>QNo</td><td>Question</td><td>A</td><td>B</td><td>C</td><td>D</td><td>Correct</td></tr>`;
+    for(let i=0;i<=n-1;i++){
+let trtd=`<tr><td>${data[i]["qno"]}</td><td>${data[i]["question"]}</td><td>${data[i]["a"]}</td><td>${data[i]["b"]}</td><td>${data[i]["c"]}</td><td>${data[i]["d"]}</td><td>${data[i]["answer"]}</td></tr>`;
+output+=trtd;
+    }
+
+output=`<table border="1">${output}</table>`;
+    document.getElementById("dd").innerHTML=output;
+}
+    </script>
+    <div id="dd"></div>
+</body>
+
+</html>

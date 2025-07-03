@@ -1,0 +1,82 @@
+
+.no{
+    display: none;
+}
+
+.box{
+    box-shadow: 5px 5px 10px #888888;
+    width: 400px;
+    /* background-color:darkorange; */
+    border-radius: 10px;
+    border-style: ridge;
+    border-color: darkgreen;
+}
+
+.option{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+    background-color: deeppink;
+    border-radius: 10px;
+}
+
+.option:hover{
+    background-color: darkmagenta;
+    color: white;
+}
+
+
+.question{
+    /* background-color: dodgerblue; */
+    width: 400px;
+    /* border-style: ridge; */
+    /* border-color: darkmagenta; */
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.red{
+    background-color: red;
+    width: 300px;
+    height: 30px;
+    border-style: ridge;
+    border-color: aqua;
+    border-radius: 10px;
+    height: 20px;
+}
+.green{
+    background-color: green;
+    width: 300px;
+    height: 30px;
+    border-style: ridge;
+    border-color: aqua;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.quiz{
+    background-color: aqua;
+    color: darkcyan;
+    width: 400px;
+    border-style: ridge;
+    border-color: blueviolet;
+    border-radius: 10px;
+}
+
+.button{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: ridge;
+    border-color: darkcyan;
+    color: lawngreen;
+    background-color: darkorchid;
+    font-size: 20px;
+}
