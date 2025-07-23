@@ -1,0 +1,53 @@
+
+.boxshadow{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-align: center;
+text-wrap: wrap;
+box-shadow: 5px 5px 10px #888888;
+width: 50%;
+margin: auto;
+border-radius: 20px;
+background-color: aquamarine;
+}
+
+.optionno1{
+    display: flex;
+    justify-content: center;
+    text-wrap: wrap;
+    margin-left: 60px;
+    font-size: 15px;
+    width: 300px;
+    height: 20px;
+}
+
+.option1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+    /* background-color: deeppink; */
+    border-radius: 10px;
+}
+
+.none{
+    display: none;
+
+}
+
+.btt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100px;
+    /* height: 20px; */
+    background-color: darkgoldenrod;
+    color: white;
+    border-radius: 10px;
+    border-style: ridge;
+    border-color: aqua;
+}
